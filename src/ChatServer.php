@@ -158,7 +158,7 @@ EOF;
         }
 
         $nickname = $this->clients[$from->resourceId]['nickname'];
-        $this->broadcastMessage("{$nickname}: {$matches[1]}");
+        $this->broadcastMessage("{$nickname}: {$matches[1]}", $from);
     }
 
     protected function handlePrivateMessage(ConnectionInterface $from, $message)
